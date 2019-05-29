@@ -1,0 +1,706 @@
+$white:#FFFFFF;
+$gray3:#333;
+$gray59:#595959;
+$gray6c:#6c6c6c;
+$gray9c:#9c9c9c;
+$grayd:#ddd;
+$graye:#eee;
+$grayf3:#f3f3f3;
+$blue:#0096ff;
+$blue2:#009bfb;
+$orange:#f18d0f;
+$red:#ff2f2f;
+$green:#00cc4d;
+
+/*布局开始*/
+//============公共部分================
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: $gray9c;
+  font-size: 16px;
+}
+
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: $gray9c;
+  font-size: 16px;
+}
+
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: $gray9c;
+  font-size: 16px;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: $gray9c;
+  font-size: 16px;
+}
+
+.fixedicon {
+  position: fixed;
+  bottom: 1.6rem;
+  right: .32rem;
+  z-index: 10;
+
+  li {
+    width: 1.653333rem;
+    height: 1.653333rem;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 1.653333rem;
+    background: $white;
+    box-shadow: 0 2px 7px $grayd;
+    color: $blue;
+    margin-bottom: .533333rem;
+
+    i {
+      font-size: 26px;
+    }
+  }
+}
+
+// 公共tab切换
+.van-tabs--line {
+  padding-top: 1.28rem;
+}
+
+.van-tabs--line .van-tabs__wrap {
+  height: 1.28rem;
+  position: fixed;
+}
+
+.van-tab {
+  height: 1.28rem;
+  line-height: 1.28rem;
+  font-size: 16px;
+  color: $gray3;
+}
+
+.hwui-tab-tab {
+  display: flex;
+  justify-content: space-between;
+  height: 1.066667rem;
+  line-height: 1.066667rem;
+  background: $white;
+  font-size: 14px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 0 0 6px $graye;
+
+  >div {
+    width: calc(50% - 0.5px);
+    text-align: center;
+    box-sizing: border-box;
+    color: $gray9c;
+
+    &.active {
+      color: $blue;
+    }
+  }
+
+  >i {
+    height: .533333rem;
+    width: 1px;
+    margin-top: .266667rem;
+    background: $grayd;
+  }
+}
+
+.popinbox {
+
+  //弹框内tab样式
+  .van-tabs--line .van-tabs__wrap {
+    height: 1.173333rem;
+  }
+
+  .van-tab {
+    height: 1.173333rem;
+    line-height: 1.173333rem;
+
+  }
+}
+
+.popinbox1 {
+  .van-tabs--line .van-tabs__wrap {
+    margin-top: 2.586667rem;
+  }
+}
+
+.popinbox2 {
+  .van-tabs--line .van-tabs__wrap {
+    margin-top: 1.306667rem;
+  }
+}
+
+//公共头部导航
+.mynav {
+  background: linear-gradient(to right, #00c8d0 0%, #0096fe 100%);
+  ;
+  padding-bottom: .266667rem;
+
+  &.nobottom {
+    padding-bottom: 0px;
+  }
+
+  .van-nav-bar {
+    background: linear-gradient(to right, #00c8d0 0%, #0096fe 100%);
+    ;
+
+    >div {
+      color: white;
+
+      i {
+        color: white !important;
+
+        &.van-icon-search {
+          font-size: 18px;
+        }
+      }
+
+      span {
+        color: white;
+      }
+    }
+  }
+
+  .searchbox {
+    height: .853333rem;
+    line-height: .853333rem;
+    width: calc(100% - .533333rem);
+    margin: 0 auto;
+    color: white;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: .426667rem;
+    margin-top: .266667rem;
+    font-size: 14px;
+
+    i {
+      margin: 0px .266667rem 0 .266667rem;
+      color: $white;
+      font-size: 16px;
+      line-height: .853333rem;
+    }
+      input{
+        height: .853333rem;
+        line-height: .853333rem;
+        width: calc(100% - 1.6rem);
+        background-color: rgba(255,255,255,0);
+        color: white;
+        padding: 1px;
+        border: none;
+        &::placeholder{
+          color: $white;
+        }
+      }
+  }
+}
+
+// ==============列表页开始=============
+.listStyle {
+
+  // 列表
+  .wrapper {
+    position: relative;
+    top: 1.333333rem;
+
+    &.top2 {
+      top: .266667rem;
+    }
+
+    .msgList {
+      li {
+        margin-bottom: .266667rem;
+
+        .van-swipe-cell__right {
+          font-size: 16px;
+          text-align: center;
+          color: $white;
+          background: $red;
+          width: 50px;
+
+          p {
+            position: relative;
+            top: calc(50% - 19px);
+          }
+        }
+
+        .wrapper_box {
+          box-sizing: border-box;
+          padding: .213333rem .266667rem .32rem;
+
+          >p {
+            &:first-child {
+              font-size: 14px;
+              color: $gray6c;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 2;
+              -webkit-box-orient: vertical;
+            }
+
+            &:last-child {
+              margin-top: 3px;
+              text-align: right;
+              color: $gray9c;
+            }
+          }
+
+          >div {
+            display: flex;
+
+            p {
+              margin-top: .133333rem;
+              width: 1.6rem;
+              text-align: center;
+              padding: .053333rem 0;
+              border-radius: 2px;
+
+              &:nth-child(1) {
+                color: $orange;
+                border: 1px solid $orange;
+                margin-right: .4rem;
+              }
+
+              &:nth-child(2) {
+                color: $blue;
+                border: 1px solid $blue;
+
+                >span {
+                  color: $gray6c;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ==============列表页结束=============
+// ==============详情页开始=============
+.detailStyle {
+  .title {
+    background: white;
+
+    >img {
+      width: 1.973333rem;
+    }
+
+    >.tname {
+      padding: .053333rem .266667rem 0;
+      font-size: 16px;
+      color: $gray3;
+    }
+
+    >.tread {
+      font-size: 13px;
+      color: $blue;
+      padding: 0 .266667rem .266667rem;
+
+      span {
+        color: $gray3;
+      }
+    }
+
+    >div {
+      display: flex;
+      padding: .266667rem .266667rem;
+      color: $gray6c;
+      font-size: 13px;
+
+      &.last {
+        padding-top: 0px;
+      }
+
+      >p {
+        width: 50%;
+
+        >span {
+          color: $orange;
+        }
+      }
+    }
+  }
+
+  .content {
+    margin-top: .16rem;
+    box-sizing: border-box;
+    padding: .266667rem .266667rem .533333rem;
+    background: white;
+
+    >p {
+      font-size: 16px;
+      color: $gray3;
+      text-align: center;
+      line-height: 24px;
+    }
+
+
+    >div {
+      font-size: 14px;
+      color: $gray6c;
+      line-height: 20px;
+    }
+  }
+
+  .footer {
+    margin-top: .16rem;
+    margin-bottom: .533333rem;
+    font-size: 14px;
+    background: white;
+    box-sizing: border-box;
+    padding: .266667rem;
+
+    >p {
+      color: $gray6c;
+      font-size: 14px;
+    }
+
+    >ul {
+      li {
+        line-height: 20px;
+
+        a {
+          color: #1b7ce2;
+        }
+      }
+    }
+  }
+
+  .rightpop {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+    background: $grayf3;
+
+    .readDetail {
+      height: 100%;
+
+      .van-tabs {
+        height: calc(100% - 2.826667rem);
+
+        .van-tabs__content {
+          height: 100%;
+          overflow: auto;
+          margin-bottom: .32rem;
+        }
+      }
+
+      .userbox {
+        margin-top: .32rem;
+        background: $white;
+
+        >p {
+          width: 100%;
+          height: .853333rem;
+          line-height: .853333rem;
+          text-indent: .32rem;
+          border-bottom: 1px solid $grayd;
+          color: $gray3;
+          font-size: 16px;
+        }
+
+        >ul {
+          padding: .346667rem .32rem;
+          width: 100%;
+          display: flex;
+          justify-content: flex-start;
+          flex-flow: wrap;
+          box-sizing: border-box;
+
+          li {
+            width: 20%;
+            text-align: center;
+            font-size: 16px;
+            color: $gray6c;
+            line-height: .8rem
+          }
+        }
+      }
+    }
+  }
+}
+
+//============== 新增开始 ===================
+.addstyle {
+  .submit {
+    margin-bottom: 20px;
+    width: calc(100% - 20px);
+    margin: 20px auto;
+    display: block;
+  }
+
+  .form_box {
+
+    // margin-top:.266667rem;
+    .line {
+      clear: both;
+      background: $grayf3;
+      width: 100%;
+      height: .133333rem;
+    }
+
+    .form_item {
+      background: white;
+
+      &.flex {
+        display: flex;
+
+        .right {
+          width: calc(100% - 3.2rem);
+        }
+      }
+
+      &.sure .left::before {
+        content: "* ";
+        font-size: 16px;
+        line-height: 16px;
+        color: $red;
+      }
+
+      .left {
+        float: left;
+        font-size: 16px;
+        line-height: 1.2rem;
+        margin-left: .32rem;
+      }
+
+      .right {
+        input {
+          border: 0;
+          margin: 0;
+          padding: 0;
+          width: 100%;
+          resize: none;
+          display: block;
+          color: $gray6c;
+          font-size: 16px;
+          box-sizing: border-box;
+          background-color: transparent;
+          height: .773333rem;
+          display: block;
+          padding: 9px 0;
+          box-sizing: content-box;
+        }
+
+        .textarea {
+          padding-bottom: .533333rem;
+
+          textarea {
+            display: block;
+            width: calc(100% - .533333rem);
+            height: 4rem;
+            margin: 0 auto;
+            border: none;
+            font-size: 16px;
+            color: $gray6c;
+          }
+        }
+
+        .fileBox {
+          width: calc(100% - .533333rem);
+          margin: 0px auto;
+          clear: both;
+          padding-bottom: 20px;
+
+          .inputBox {
+            color: #0096ff;
+            line-height: .8rem;
+            overflow: hidden;
+            font-size: 14px;
+            position: relative;
+            width: 2.666667rem;
+
+            .iconupload {
+              font-size: 20px;
+              position: relative;
+              top: 2px;
+            }
+
+            input {
+              width: 100%;
+              height: .8rem;
+              opacity: 0;
+              cursor: pointer;
+              position: absolute;
+              top: 0;
+              left: 0;
+            }
+          }
+
+          .fileBoxList {
+            font-size: 14px;
+
+            li {
+              color: $blue;
+              margin-top: .266667rem;
+
+              a {
+                color: $blue;
+              }
+
+              .icondelete {
+                color: $red;
+                font-size: 14px;
+              }
+            }
+          }
+        }
+
+        .select {
+          //与input保持一致
+          color: $blue;
+          height: .64rem;
+          line-height: .64rem;
+          padding: .266667rem .4rem;
+          font-size: 16px;
+
+          i {
+            font-size: 14px;
+            margin-left: .053333rem;
+          }
+        }
+      }
+    }
+  }
+
+  // =============右侧弹窗开始===================
+  .rightpop {
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    box-sizing: border-box;
+    background: $grayf3;
+
+    .chooseUserAll {
+      height: 100%;
+
+      .van-tabs {
+        height: calc(100% - 5.226667rem);
+
+        .van-tabs__content {
+          height: 100%;
+          overflow: auto;
+        }
+      }
+
+      .userbox {
+        height: calc(100% - 3.946667rem);
+
+        .levelul {
+          height: calc(100% - 1.6rem);
+          overflow: auto;
+        }
+      }
+
+      .searchlistBox {
+        height: calc(100% - 4.266667rem);
+
+        .levelul {
+          height: 100%;
+          overflow: auto;
+        }
+      }
+
+      .crumb {
+        width: 100%;
+        height: 1.333333rem;
+        background: white;
+
+        li {
+          font-size: 16px;
+          display: inline-block;
+          list-style: none;
+          padding: .106667rem .266667rem;
+          background: white;
+          color: $blue;
+          border: 1px solid $blue;
+          box-sizing: border-box;
+          margin-top: .24rem;
+          margin-left: .266667rem;
+          border-radius: 4px;
+
+          &:last-child {
+            color: $white;
+            background: $blue;
+          }
+        }
+      }
+
+      .levelul {
+        margin-top: .266667rem;
+
+        li {
+          background: white;
+          display: flex;
+          justify-content: space-between;
+          height: .64rem;
+          line-height: .64rem;
+          font-size: 16px;
+          color: $gray3;
+          padding: .32rem;
+          color: $blue;
+          margin-bottom: 1px;
+
+          i.checkfont {
+            font-style: inherit;
+            color: $gray3;
+          }
+
+          >div:nth-child(2) {
+            font-size: 14px;
+
+            &::before {
+              content: "";
+              display: inline-block;
+              width: 1px;
+              background: #f3f3f3;
+              height: .533333rem;
+              right: 10px;
+              position: relative;
+              top: .106667rem;
+            }
+
+            i {
+              font-size: 12px;
+              margin-right: .16rem;
+            }
+          }
+        }
+      }
+
+      .bottom {
+        width: 100%;
+        background: white;
+        position: fixed;
+        height: 1.333333rem;
+        line-height: 1.333333rem;
+        font-size: 16px;
+        color: $gray3;
+        display: flex;
+        justify-content: space-between;
+
+        p {
+          &:first-child {
+            margin-left: .266667rem;
+          }
+
+          &:last-child {
+            height: 1.333333rem;
+            line-height: 1.333333rem;
+            text-align: center;
+            color: $white;
+            background: $blue;
+            width: 2.133333rem;
+          }
+        }
+      }
+    }
+  }
+}
